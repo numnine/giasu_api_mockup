@@ -69,12 +69,12 @@ When a HTTP request return error, the HTTP status codes should be in follow list
 
 Resources realted to users in the API.
 
-## Index [/users/{user_id}]
+## User [/users/{user_id}]
 
 + Parameters
     + user_id: 1 (required, number) - ID of user
 
-### Get list of users [GET]
+### Get detail of users [GET]
 
 + Response 200 (application/json)
 
@@ -87,6 +87,29 @@ Resources realted to users in the API.
             },
             "duration": "1234"
         }
+        
+### Create new user [POST]
+
++ Request (application/json)
+
+        {
+            "username": "phungnc",
+            "email": "phungnc@gmail.com 
+        }
+
++ Response 200 (application/json)
+
+        {
+            "error_status": "0",
+            "error_content": "",
+            "result": {
+                "id": 2,
+                "username": "phungnc"
+            },
+            "duration": "1234"
+        }
+
+
 
 ## Group Question
 
