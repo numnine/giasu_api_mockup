@@ -8,6 +8,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 # Authentication
 
 To make requests to api, you will need to set an authorization header:
+
 * Basic authentication for public resources:
 
     <code> Basic-Authorization: Basic {base 64 encoded string of "##apollo2015##" string} </code>
@@ -15,6 +16,15 @@ To make requests to api, you will need to set an authorization header:
 * JSON Web Token authentication for protected resources:
     
     <code> Authorization: Bearer {yourtokenhere} </code>
+
+# Group HTTP Status Codes
+When a HTTP request return error, the HTTP status codes should be in follow list:
+
++ Code **401**: user unauthorized or token expired.
++ Code **404**: data not found error.
++ Code **415**: Unsupported Media Type. This error will happen when user upload file is not an image.
++ Code **405**: all errors related to method synctax.
++ Code **500**: other error. This error should be attached a error message (ex: **{"message": "error message"}**).
 
 # Polls API Root [/]
 
