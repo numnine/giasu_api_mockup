@@ -69,25 +69,28 @@ When a HTTP request return error, the HTTP status codes should be in follow list
 
 Resources realted to users in the API.
 
-## User [/users/{user_id}]
+## Users [/users]
 
-+ Parameters
-    + user_id: 1 (required, number) - ID of user
-
-### Get detail of users [GET]
+### Get list of user [GET]
 
 + Response 200 (application/json)
 
         {
             "error_status": "0",
             "error_content": "",
-            "result": {
-                "id": 1,
-                "username": "pcl"
-            },
+            "result": [
+                {
+                    "id": 1,
+                    "username": "pcl"
+                },
+                {
+                    "id": 2,
+                    "username": "phungnc"
+                }
+            ],
             "duration": "1234"
         }
-        
+
 ### Create new user [POST]
 
 + Request (application/json)
@@ -109,161 +112,53 @@ Resources realted to users in the API.
             "duration": "1234"
         }
 
-
-
-## Group Question
-
-Resources related to questions in the API.
-
-## Question [/questions/{question_id}]
-
-A Question object has the following attributes:
-
-+ question
-+ published_at - An ISO8601 date when the question was published.
-+ url
-+ choices - An array of Choice objects.
+## User [/users/{user_id}]
 
 + Parameters
-    + question_id: 1 (required, number) - ID of the Question in form of an integer
+    + user_id: 1 (required, number) - ID of user
 
-### View a Questions Detail [GET]
+### Get detail of users [GET]
 
 + Response 200 (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "published_at": "2014-11-11T08:40:51.620Z",
-            "url": "/questions/1",
-            "choices": [
-                {
-                    "choice": "Swift",
-                    "url": "/questions/1/choices/1",
-                    "votes": 2048
-                }, {
-                    "choice": "Python",
-                    "url": "/questions/1/choices/2",
-                    "votes": 1024
-                }, {
-                    "choice": "Objective-C",
-                    "url": "/questions/1/choices/3",
-                    "votes": 512
-                }, {
-                    "choice": "Ruby",
-                    "url": "/questions/1/choices/4",
-                    "votes": 256
-                }
-            ]
+            "error_status": "0",
+            "error_content": "",
+            "result": {
+                "id": 1,
+                "username": "pcl"
+            },
+            "duration": "1234"
         }
-
-## Choice [/questions/{question_id}/choices/{choice_id}]
-
-+ Parameters
-    + question_id: 1 (required, number) - ID of the Question in form of an integer
-    + choice_id: 1 (required, number) - ID of the Choice in form of an integer
-
-### Vote on a Choice [POST]
-
-This action allows you to vote on a question's choice.
-
-+ Response 201
-
-    + Headers
-
-            Location: /questions/1
-
-## Questions Collection [/questions{?page}]
-
-+ Parameters
-    + page: 1 (optional, number) - The page of questions to return
-
-### List All Questions [GET]
-
-+ Response 200 (application/json)
-
-    + Headers
-
-            Link: </questions?page=2>; rel="next"
-
-    + Body
-
-            [
-                {
-                    "question": "Favourite programming language?",
-                    "published_at": "2014-11-11T08:40:51.620Z",
-                    "url": "/questions/1",
-                    "choices": [
-                        {
-                            "choice": "Swift",
-                            "url": "/questions/1/choices/1",
-                            "votes": 2048
-                        }, {
-                            "choice": "Python",
-                            "url": "/questions/1/choices/2",
-                            "votes": 1024
-                        }, {
-                            "choice": "Objective-C",
-                            "url": "/questions/1/choices/3",
-                            "votes": 512
-                        }, {
-                            "choice": "Ruby",
-                            "url": "/questions/1/choices/4",
-                            "votes": 256
-                        }
-                    ]
-                }
-            ]
-
-### Create a New Question [POST]
-
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
-
-+ question (string) - The question
-+ choices (array[string]) - A collection of choices.
+        
+### Edit and user [POST]
 
 + Request (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
+            "username": "phungnc",
+            "email": "phungnc@gmail.com 
         }
 
-+ Response 201 (application/json)
++ Response 200 (application/json)
 
-    + Headers
+        {
+            "error_status": "0",
+            "error_content": "",
+            "result": {
+                "id": 2,
+                "username": "phungnc"
+            },
+            "duration": "1234"
+        }
+        
+### Delete an user [DELETE]
 
-            Location: /questions/2
++ Response 200 (application/json)
 
-    + Body
-
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2014-11-11T08:40:51.620Z",
-                "url": "/questions/2",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "url": "/questions/2/choices/1",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "url": "/questions/2/choices/2",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "url": "/questions/2/choices/3",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "url": "/questions/2/choices/4",
-                        "votes": 0
-                    }
-                ]
-            }
+        {
+            "error_status": "0",
+            "error_content": "",
+            "result": "",
+            "duration": "1234"
+        }
