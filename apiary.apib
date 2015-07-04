@@ -65,22 +65,27 @@ When a HTTP request return error, the HTTP status codes should be in follow list
         }
 
 
-# Polls API Root [/]
+## Group User
 
-This resource does not have any attributes. Instead it offers the initial
-API affordances in the form of the links in the JSON body.
+Resources realted to users in the API.
 
-It is recommend to follow the “url” link values,
-[Link](https://tools.ietf.org/html/rfc5988) or Location headers where
-applicable to retrieve resources. Instead of constructing your own URLs,
-to keep your client decoupled from implementation details.
+## Index [/users/{user_id}]
 
-## Retrieve the Entry Point [GET]
++ Parameters
+    + user_id: 1 (required, number) - ID of user
+
+### Get list of users [GET]
 
 + Response 200 (application/json)
 
         {
-            "questions_url": "/questions"
+            "error_status": "0",
+            "error_content": "",
+            "result": {
+                "id": 1,
+                "username": "pcl"
+            },
+            "duration": "1234"
         }
 
 ## Group Question
