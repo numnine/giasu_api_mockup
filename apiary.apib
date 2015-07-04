@@ -17,14 +17,53 @@ To make requests to api, you will need to set an authorization header:
     
     <code> Authorization: Bearer {yourtokenhere} </code>
 
-# Group HTTP Status Codes
+# HTTP Status Codes
+
 When a HTTP request return error, the HTTP status codes should be in follow list:
 
-+ Code **401**: user unauthorized or token expired.
-+ Code **404**: data not found error.
-+ Code **415**: Unsupported Media Type. This error will happen when user upload file is not an image.
-+ Code **405**: all errors related to method synctax.
-+ Code **500**: other error. This error should be attached a error message (ex: **{"message": "error message"}**).
+* **401**: User unauthorized or token expired.
+* **404**: Resource is not found.
+* **500**: Internal server error. 
+
+# HTTP JSON Response
+
+* Response format
+
+        {
+            "error_status": "0 | 1",
+            "error_content": "string | json | array of json",
+            "result": "string | json | array of json",
+            "duration": "timestamp"
+        }
+    
+* with errors:
+
+        {
+            "error_status": "1",
+            "error_content": {
+                "username": [
+                    "The username field is required."
+                ],
+                "password": [
+                    "The password field is required."
+                ]
+            },
+            "result": "",
+            "duration": "1234"
+        }
+    
+* without errors:
+
+        {
+            "error_status": "0",
+            "error_content": "",
+            "result": {
+                "id": 1,
+                "username": "pcl"
+            },
+            "duration": "1234"
+        }
+
 
 # Polls API Root [/]
 
