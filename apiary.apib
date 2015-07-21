@@ -164,3 +164,120 @@ Resources realted to users in the API.
             "result": "",
             "duration": "1234"
         }
+## Group Question
+
+Resources realted to questions in the API.
+
+## Default [/questions]
+
+### Get list of question [GET]
+
++ Response 200 (application/json)
+
+        {
+            "error_status": "0",
+            "error_content": "",
+            "result": [
+                {
+                    "id": 1,
+                    "title": "pcl",
+                    "body": "",
+                    "media": "",
+                },
+                {
+                    "id": 2,
+                    "title": "phungnc",
+                    "body": "",
+                    "media": "",
+                }
+            ],
+            "duration": "1234"
+        }
+
+### Create new question [POST]
+
++ Request (application/json)
+
+        {
+          "title": "con cò bé bé",
+          "body": "基本的には1 ticketに対して1 topic branch 1つの目的に対して1 commit と覚えておいて下さい。",
+          "media": "",
+          "userAvatar": "https://tky-chat-work-appdata.s3.amazonaws.com/avatar/363/363866.rsz.png",
+          "userId": "55a49222c66f5d882d640ec6"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "error_status": "0",
+            "error_content": "",
+            "result": {
+                  "title": "con cò bé bé",
+                  "body": "基本的には1 ticketに対して1 topic branch 1つの目的に対して1 commit と覚えておいて下さい。",
+                  "media": "",
+                  "userAvatar": "https://tky-chat-work-appdata.s3.amazonaws.com/avatar/363/363866.rsz.png",
+                  "id": "55adc767021ebe155f8ca170",
+                  "userId": "55a49222c66f5d882d640ec6"
+            },
+            "duration": "1234"
+        }
+
+## Question [/questions/{question_id}]
+
++ Parameters
+    + question_id: 1 (required, number) - ID of question
+
+### Get detail of question [GET]
+
++ Response 200 (application/json)
+
+        {
+            "error_status": "0",
+            "error_content": "",
+            "result": {
+                "id": 1,
+                "title": "pcl",
+                "body": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+                "media": "http://media.doisongphapluat.com/297/2014/8/25/hot-girl-ban-bao-5.PNG"
+            },
+            "duration": "1234"
+        }
+        
+### Edit a Question [PUT]
+
++ Request (application/json)
+
+        {
+          "title": "con cò bé bé",
+          "body": "基本的には1 ticketに対して1 topic branch 1つの目的に対して1 commit と覚えておいて下さい。",
+          "media": "",
+          "userAvatar": "https://tky-chat-work-appdata.s3.amazonaws.com/avatar/363/363866.rsz.png",
+          "userId": "55a49222c66f5d882d640ec6"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "error_status": "0",
+            "error_content": "",
+            "result": {
+                  "title": "con cò bé bé",
+                  "body": "基本的には1 ticketに対して1 topic branch 1つの目的に対して1 commit と覚えておいて下さい。",
+                  "media": "",
+                  "userAvatar": "https://tky-chat-work-appdata.s3.amazonaws.com/avatar/363/363866.rsz.png",
+                  "id": "55adc767021ebe155f8ca170",
+                  "userId": "55a49222c66f5d882d640ec6"
+            },
+            "duration": "1234"
+        }
+        
+### Delete a Question by id [DELETE]
+
++ Response 200 (application/json)
+
+        {
+            "error_status": "0",
+            "error_content": "",
+            "result": "",
+            "duration": "1234"
+        }
