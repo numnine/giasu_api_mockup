@@ -271,8 +271,52 @@ Resources realted to questions in the API.
             "duration": "1234"
         }
         
-### Delete a Question by id [DELETE]
+### Delete a question [DELETE]
 
++ Response 200 (HTTP Status Code)
+
+        {
+            "error_status": "0",
+            "error_content": "",
+            "result": "",
+            "duration": "1234"
+        }
+## Question - Answer Default [/questions/{question_id}/answers]
+
+### Delete all Answer of Question [DELETE]
+    
++ Request (application/json)
+    
++ Response 200 (application/json)
+    
+### Get answers of questions [GET]
+
++ Request (application/json)
+ 
++ Response 200 (application/json)
+
+### Create new answer of this question [POST]
+
++ Request (application/json)
+
++ Response 200
+
+## Question - Answer [/questions/{question_id}/answers/{answer_id}]
+
+### Get [GET]
+
++ Request (application/json)
+
++ Response 200
+
+### Delete a related question by id for answers [DELETE]
+
++ Request URL 
+
+    ```
+    http://localhost:3000/api/questions/{question_id}/answers/answer_id
+    ```
+    
 + Response 200 (application/json)
 
         {
@@ -281,3 +325,4 @@ Resources realted to questions in the API.
             "result": "",
             "duration": "1234"
         }
+        
