@@ -66,32 +66,42 @@ When a HTTP request return error, the HTTP status codes should be in follow list
             "duration": "1234"
         }
 
+## Group Authentication
 
-## Group User
+## Login [/login]
 
-Resources realted to users in the API.
+### login [POST]
 
-## Default [/users]
++ Request (application/json)
 
-### Get list of user [GET]
+        {
+            "username": "string|required",
+            "password": "string|required"
+        }
 
 + Response 200 (application/json)
 
         {
-            "error_status": "0",
+            "error_status": 0,
             "error_content": "",
-            "result": [
-                {
-                    "id": 1,
-                    "username": "pcl"
-                },
-                {
-                    "id": 2,
-                    "username": "phungnc"
-                }
-            ],
-            "duration": "1234"
+            "result": {
+                "id": "2",
+                "username": "hocsinh1",
+                "email": "hocsinh1@tutoronline.vn",
+                "phone": "0123333331",
+                "first_name": "Học",
+                "last_name": "Sinh 1",
+                "type_id": "3",
+                "registration_code": null,
+                "created_at": "2015-12-12 19:21:46",
+                "updated_at": "2015-12-12 19:21:46",
+                "type_name": "Học sinh",
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaXNzIjoiaHR0cDpcL1wvNTIuMzMuMjUzLjE1MzoxNDIxXC9hcGlcL2xvZ2luIiwiaWF0IjoiMTQ0OTk0OTA4OCIsImV4cCI6IjE0NDk5NTI2ODgiLCJuYmYiOiIxNDQ5OTQ5MDg4IiwianRpIjoiYWFiYzg2NjU0Yjc0OGYyNjI4ODVkOGY1MjYwYTZiYjMifQ.KDBNvl9pzi3uwyj84VMARoHc-ejC6RqWdsmXQjPEViE"
+            },
+            "duration": ""
         }
+        
+## Resgister [/register]
 
 ### Register [POST]
 
@@ -112,14 +122,26 @@ Resources realted to users in the API.
 + Response 200 (application/json)
 
         {
-            "error_status": "0",
+            "error_status": 0,
             "error_content": "",
             "result": {
-                "id": 2,
-                "username": "phungnc"
+                "username": "hocsinh100",
+                "email": "hocsinh100@tutoronline.vn",
+                "phone": "093376355",
+                "first_name": "Hoc",
+                "last_name": "Sinh 100",
+                "type_id": "3",
+                "updated_at": "2015-12-12 19:42:40",
+                "created_at": "2015-12-12 19:42:40",
+                "id": 33,
+                "type_name": "Học sinh"
             },
-            "duration": "1234"
+            "duration": ""
         }
+
+## Group User
+
+Resources realted to users in the API.
 
 ## User [/users/{user_id}]
 
@@ -131,13 +153,29 @@ Resources realted to users in the API.
 + Response 200 (application/json)
 
         {
-            "error_status": "0",
+            "error_status": 0,
             "error_content": "",
             "result": {
-                "id": 1,
-                "username": "pcl"
+                "id": "33",
+                "username": "hocsinh100",
+                "email": "hocsinh100@tutoronline.vn",
+                "phone": "093376355",
+                "first_name": "Hoc",
+                "last_name": "Sinh 100",
+                "type_id": "3",
+                "registration_code": null,
+                "created_at": "2015-12-12 19:42:40",
+                "updated_at": "2015-12-12 19:42:40",
+                "type_name": "Học sinh",
+                "grades": [
+                    {
+                        "id": "1",
+                        "name": "Lớp 1",
+                        "description": null
+                    }
+                ]
             },
-            "duration": "1234"
+            "duration": ""
         }
         
 ### Edit and user [POST]
@@ -145,20 +183,35 @@ Resources realted to users in the API.
 + Request (application/json)
 
         {
-            "username": "phungnc",
-            "email": "phungnc@gmail.com 
+            "username": "string|required",
+            "email": "string|required",
+            "phone": "string|required",
+            "password": "string|required",
+            "first_name": "string|required",
+            "last_name": "string|optional",
+            "type_id": "integer|optional|in:2(giasu),3(hocsinh)",
+            "grade_ids[]": "integer|required",
+            "grade_ids[]": "integer|required"
         }
 
 + Response 200 (application/json)
 
         {
-            "error_status": "0",
+            "error_status": 0,
             "error_content": "",
             "result": {
-                "id": 2,
-                "username": "phungnc"
+                "username": "hocsinh100",
+                "email": "hocsinh100@tutoronline.vn",
+                "phone": "093376355",
+                "first_name": "Hoc",
+                "last_name": "Sinh 100",
+                "type_id": "3",
+                "updated_at": "2015-12-12 19:42:40",
+                "created_at": "2015-12-12 19:42:40",
+                "id": 33,
+                "type_name": "Học sinh"
             },
-            "duration": "1234"
+            "duration": ""
         }
         
 ### Delete an user [DELETE]
