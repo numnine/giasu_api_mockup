@@ -98,15 +98,15 @@ Resources realted to users in the API.
 + Request (application/json)
 
         {
-            "username": "phungnc",
-            "email": "phungnc@gmail.com,
-            "phone": "0937263746",
-            "password": "123456",
-            "first_name": "Phung",
-            "last_name": "Cao",
-            "type_id": 2(Giasu)|3(Hoc sinh),
-            "grade_ids[]": 1,
-            "grade_ids[]": 2
+            "username": "string|required",
+            "email": "string|required",
+            "phone": "string|required",
+            "password": "string|required",
+            "first_name": "string|required",
+            "last_name": "string|optional",
+            "type_id": "integer|optional|in:2(giasu),3(hocsinh)",
+            "grade_ids[]": "integer|required",
+            "grade_ids[]": "integer|required"
         }
 
 + Response 200 (application/json)
