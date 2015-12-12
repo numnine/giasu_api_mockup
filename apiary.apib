@@ -93,13 +93,20 @@ Resources realted to users in the API.
             "duration": "1234"
         }
 
-### Create new user [POST]
+### Register [POST]
 
 + Request (application/json)
 
         {
             "username": "phungnc",
-            "email": "phungnc@gmail.com 
+            "email": "phungnc@gmail.com,
+            "phone": "0937263746",
+            "password": "123456",
+            "first_name": "Phung",
+            "last_name": "Cao",
+            "type_id": 2(Giasu)|3(Hoc sinh),
+            "grade_ids[]": 1,
+            "grade_ids[]": 2
         }
 
 + Response 200 (application/json)
