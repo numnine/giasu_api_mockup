@@ -115,6 +115,7 @@ When a HTTP request return error, the HTTP status codes should be in follow list
             "first_name": "string|required",
             "last_name": "string|optional",
             "type_id": "integer|optional|in:2(giasu),3(hocsinh)",
+            "avatar": "User's avatar",
             "grade_ids[]": "integer|required",
             "grade_ids[]": "integer|required"
         }
@@ -135,6 +136,52 @@ When a HTTP request return error, the HTTP status codes should be in follow list
                 "created_at": "2015-12-12 19:42:40",
                 "id": 33,
                 "type_name": "Học sinh"
+            },
+            "duration": ""
+        }
+        
+## Group Master data
+
+Resources realted to users in the API.
+
+## Master data [/master-data?cat_id={cat_id}]
+
++ Parameters
+    + cat_id: 1 (number) - 1(grade), 2(subject)
+
+### Get master data by category [GET]
+
++ Response 200 (application/json)
+
+        {
+            "error_status": 0,
+            "error_content": "",
+            "result": {
+                {
+                  "id": "1",
+                  "name": "Lớp 1",
+                  "description": null
+                },
+                {
+                  "id": "2",
+                  "name": "Lớp 2",
+                  "description": null
+                },
+                {
+                  "id": "3",
+                  "name": "Lớp 3",
+                  "description": null
+                },
+                {
+                  "id": "4",
+                  "name": "Lớp 4",
+                  "description": null
+                },
+                {
+                  "id": "5",
+                  "name": "Lớp 5",
+                  "description": null
+                }
             },
             "duration": ""
         }
@@ -167,6 +214,8 @@ Resources realted to users in the API.
                 "created_at": "2015-12-12 19:42:40",
                 "updated_at": "2015-12-12 19:42:40",
                 "type_name": "Học sinh",
+                "avatar_thumb": "/avatars/thumb/missing.png",
+                "avatar_medium": "/avatars/medium/missing.png",
                 "grades": [
                     {
                         "id": "1",
@@ -190,6 +239,7 @@ Resources realted to users in the API.
             "first_name": "string|required",
             "last_name": "string|optional",
             "type_id": "integer|optional|in:2(giasu),3(hocsinh)",
+            "avatar": "User's avatar",
             "grade_ids[]": "integer|required",
             "grade_ids[]": "integer|required"
         }
