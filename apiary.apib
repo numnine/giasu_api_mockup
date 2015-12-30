@@ -310,26 +310,51 @@ Resources realted to questions in the API.
 
         {
           "title": "con cò bé bé",
-          "body": "基本的には1 ticketに対して1 topic branch 1つの目的に対して1 commit と覚えておいて下さい。",
-          "media": "",
-          "userAvatar": "https://tky-chat-work-appdata.s3.amazonaws.com/avatar/363/363866.rsz.png",
-          "userId": "55a49222c66f5d882d640ec6"
+          "content": "基本的には1 ticketに対して1 topic branch 1つの目的に対して1 commit と覚えておいて下さい。",
+          "photos[]": "Filesystem",
+          "photo_caption[]": "Caption coresponding to filesystems"
         }
 
 + Response 200 (application/json)
 
         {
-            "error_status": "0",
-            "error_content": "",
-            "result": {
-                  "title": "con cò bé bé",
-                  "body": "基本的には1 ticketに対して1 topic branch 1つの目的に対して1 commit と覚えておいて下さい。",
-                  "media": "",
-                  "userAvatar": "https://tky-chat-work-appdata.s3.amazonaws.com/avatar/363/363866.rsz.png",
-                  "id": "55adc767021ebe155f8ca170",
-                  "userId": "55a49222c66f5d882d640ec6"
-            },
-            "duration": "1234"
+          "error_status": 0,
+          "error_content": "",
+          "result": {
+            "id": "21",
+            "title": "Em có yêu anh không?",
+            "content": "Hãy trả lời anh đi?",
+            "status_id": "0",
+            "created_at": "2015-12-30 10:35:37",
+            "updated_at": "2015-12-30 10:35:37",
+            "photos": [
+              {
+                "id": "34",
+                "url_thumb": "http://192.168.14.22:1421/uploads/Media/media/000/000/034/thumb/tumblr_meflydv8Sf1roqv59o1_500.png",
+                "url_medium": "http://192.168.14.22:1421/uploads/Media/media/000/000/034/medium/tumblr_meflydv8Sf1roqv59o1_500.png",
+                "caption": "Hihihi"
+              },
+              {
+                "id": "35",
+                "url_thumb": "http://192.168.14.22:1421/uploads/Media/media/000/000/035/thumb/tumblr_n39zxo1SQy1roqv59o1_500.png",
+                "url_medium": "http://192.168.14.22:1421/uploads/Media/media/000/000/035/medium/tumblr_n39zxo1SQy1roqv59o1_500.png",
+                "caption": "Hhoho"
+              },
+              {
+                "id": "36",
+                "url_thumb": "http://192.168.14.22:1421/uploads/Media/media/000/000/036/thumb/67c8930a4d914b5b6415e5802196b800.jpg",
+                "url_medium": "http://192.168.14.22:1421/uploads/Media/media/000/000/036/medium/67c8930a4d914b5b6415e5802196b800.jpg",
+                "caption": ""
+              },
+              {
+                "id": "37",
+                "url_thumb": "http://192.168.14.22:1421/uploads/Media/media/000/000/037/thumb/Interesting-Fun-Facts-46.jpg",
+                "url_medium": "http://192.168.14.22:1421/uploads/Media/media/000/000/037/medium/Interesting-Fun-Facts-46.jpg",
+                "caption": ""
+              }
+            ]
+          },
+          "duration": ""
         }
 
 ## Question [/questions/{question_id}]
@@ -342,15 +367,43 @@ Resources realted to questions in the API.
 + Response 200 (application/json)
 
         {
-            "error_status": "0",
-            "error_content": "",
-            "result": {
-                "id": 1,
-                "title": "pcl",
-                "body": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-                "media": "http://media.doisongphapluat.com/297/2014/8/25/hot-girl-ban-bao-5.PNG"
-            },
-            "duration": "1234"
+          "error_status": 0,
+          "error_content": "",
+          "result": {
+            "id": "21",
+            "title": "Em có yêu anh không?",
+            "content": "Hãy trả lời anh đi?",
+            "status_id": "0",
+            "created_at": "2015-12-30 10:35:37",
+            "updated_at": "2015-12-30 10:35:37",
+            "photos": [
+              {
+                "id": "34",
+                "url_thumb": "http://192.168.14.22:1421/uploads/Media/media/000/000/034/thumb/tumblr_meflydv8Sf1roqv59o1_500.png",
+                "url_medium": "http://192.168.14.22:1421/uploads/Media/media/000/000/034/medium/tumblr_meflydv8Sf1roqv59o1_500.png",
+                "caption": "Hihihi"
+              },
+              {
+                "id": "35",
+                "url_thumb": "http://192.168.14.22:1421/uploads/Media/media/000/000/035/thumb/tumblr_n39zxo1SQy1roqv59o1_500.png",
+                "url_medium": "http://192.168.14.22:1421/uploads/Media/media/000/000/035/medium/tumblr_n39zxo1SQy1roqv59o1_500.png",
+                "caption": "Hhoho"
+              },
+              {
+                "id": "36",
+                "url_thumb": "http://192.168.14.22:1421/uploads/Media/media/000/000/036/thumb/67c8930a4d914b5b6415e5802196b800.jpg",
+                "url_medium": "http://192.168.14.22:1421/uploads/Media/media/000/000/036/medium/67c8930a4d914b5b6415e5802196b800.jpg",
+                "caption": ""
+              },
+              {
+                "id": "37",
+                "url_thumb": "http://192.168.14.22:1421/uploads/Media/media/000/000/037/thumb/Interesting-Fun-Facts-46.jpg",
+                "url_medium": "http://192.168.14.22:1421/uploads/Media/media/000/000/037/medium/Interesting-Fun-Facts-46.jpg",
+                "caption": ""
+              }
+            ]
+          },
+          "duration": ""
         }
         
 ### Edit a Question [PUT]
@@ -359,26 +412,52 @@ Resources realted to questions in the API.
 
         {
           "title": "con cò bé bé",
-          "body": "基本的には1 ticketに対して1 topic branch 1つの目的に対して1 commit と覚えておいて下さい。",
-          "media": "",
-          "userAvatar": "https://tky-chat-work-appdata.s3.amazonaws.com/avatar/363/363866.rsz.png",
-          "userId": "55a49222c66f5d882d640ec6"
+          "content": "基本的には1 ticketに対して1 topic branch 1つの目的に対して1 commit と覚えておいて下さい。",
+          "photos[]": "Filesystem",
+          "photo_captions[]": "Caption coresponsing to filesystem",
+          "photo_to_be_deleted[]": "Id of photo to be deleted"
         }
 
 + Response 200 (application/json)
 
         {
-            "error_status": "0",
-            "error_content": "",
-            "result": {
-                  "title": "con cò bé bé",
-                  "body": "基本的には1 ticketに対して1 topic branch 1つの目的に対して1 commit と覚えておいて下さい。",
-                  "media": "",
-                  "userAvatar": "https://tky-chat-work-appdata.s3.amazonaws.com/avatar/363/363866.rsz.png",
-                  "id": "55adc767021ebe155f8ca170",
-                  "userId": "55a49222c66f5d882d640ec6"
-            },
-            "duration": "1234"
+          "error_status": 0,
+          "error_content": "",
+          "result": {
+            "id": "21",
+            "title": "Em có yêu anh không?",
+            "content": "Hãy trả lời anh đi?",
+            "status_id": "0",
+            "created_at": "2015-12-30 10:35:37",
+            "updated_at": "2015-12-30 10:35:37",
+            "photos": [
+              {
+                "id": "34",
+                "url_thumb": "http://192.168.14.22:1421/uploads/Media/media/000/000/034/thumb/tumblr_meflydv8Sf1roqv59o1_500.png",
+                "url_medium": "http://192.168.14.22:1421/uploads/Media/media/000/000/034/medium/tumblr_meflydv8Sf1roqv59o1_500.png",
+                "caption": "Hihihi"
+              },
+              {
+                "id": "35",
+                "url_thumb": "http://192.168.14.22:1421/uploads/Media/media/000/000/035/thumb/tumblr_n39zxo1SQy1roqv59o1_500.png",
+                "url_medium": "http://192.168.14.22:1421/uploads/Media/media/000/000/035/medium/tumblr_n39zxo1SQy1roqv59o1_500.png",
+                "caption": "Hhoho"
+              },
+              {
+                "id": "36",
+                "url_thumb": "http://192.168.14.22:1421/uploads/Media/media/000/000/036/thumb/67c8930a4d914b5b6415e5802196b800.jpg",
+                "url_medium": "http://192.168.14.22:1421/uploads/Media/media/000/000/036/medium/67c8930a4d914b5b6415e5802196b800.jpg",
+                "caption": ""
+              },
+              {
+                "id": "37",
+                "url_thumb": "http://192.168.14.22:1421/uploads/Media/media/000/000/037/thumb/Interesting-Fun-Facts-46.jpg",
+                "url_medium": "http://192.168.14.22:1421/uploads/Media/media/000/000/037/medium/Interesting-Fun-Facts-46.jpg",
+                "caption": ""
+              }
+            ]
+          },
+          "duration": ""
         }
         
 ### Delete a question [DELETE]
